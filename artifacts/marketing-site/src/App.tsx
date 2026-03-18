@@ -8,7 +8,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Home } from "@/pages/Home";
 import { About } from "@/pages/About";
 import { Services } from "@/pages/Services";
-import { Founders } from "@/pages/Founders";
+import { Newsletter } from "@/pages/Newsletter";
 import { Contact } from "@/pages/Contact";
 
 const queryClient = new QueryClient();
@@ -20,7 +20,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
-        <Route path="/founders" component={Founders} />
+        <Route path="/newsletter" component={Newsletter} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
