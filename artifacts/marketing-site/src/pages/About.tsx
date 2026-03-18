@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, User } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 
 export function About() {
@@ -16,14 +16,18 @@ export function About() {
               transition={{ duration: 0.5 }}
             >
               <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Meet the Founder</p>
-              <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight mb-6">
+              <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight mb-4">
                 Onyinyechi Nwankwo
               </h1>
-              <p className="text-xl text-muted-foreground mb-4 font-medium">
-                Founder & CEO, TES-M Marketing
-              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["Product Marketing Manager", "Community Builder", "Event Host", "Newsletter Author"].map((tag) => (
+                  <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full bg-primary/15 text-primary text-sm font-medium border border-primary/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A passionate marketing strategist based in Lagos, Nigeria, dedicated to helping businesses grow their brands, reach the right audiences, and achieve real, measurable results.
+                Pioneer author of a fast-growing newsletter for marketers in early-stage startups.
               </p>
             </motion.div>
 
@@ -34,29 +38,14 @@ export function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 lg:ml-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20"
             >
-              {/* Photo placeholder — replace the src below with the owner's actual photo */}
               <img
                 src={`${import.meta.env.BASE_URL}images/owner.jpg`}
                 alt="Onyinyechi Nwankwo – Founder & CEO"
                 className="w-full h-full object-cover object-top"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                  (e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex";
-                }}
               />
-              {/* Fallback shown until a real photo is uploaded */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 items-center justify-center flex-col gap-4 text-center px-6"
-                   style={{ display: "none" }}>
-                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                  <User className="w-12 h-12 text-primary" />
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">
-                  Upload <code className="bg-muted px-1 rounded text-xs">public/images/owner.jpg</code><br />to display the owner's photo
-                </p>
-              </div>
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                 <p className="text-white font-display font-bold text-xl">Onyinyechi Nwankwo</p>
-                <p className="text-white/80 text-sm">Founder & CEO</p>
+                <p className="text-white/80 text-sm">Founder & CEO, TES-M Marketing</p>
               </div>
             </motion.div>
           </div>
@@ -66,17 +55,29 @@ export function About() {
       {/* Story / Bio */}
       <section className="py-20 lg:py-32">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-10 text-center">Her Story</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-10 text-center">Hi, I'm Onyinye</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Onyinyechi Nwankwo founded TES-M Marketing with one clear conviction: that every business — no matter how small — deserves access to smart, strategic marketing that actually works. Based in Lagos State, she has built TES-M Marketing into a trusted agency known for creative thinking and tangible results.
+              I am a Product Marketing Manager who helps B2B startups understand their customers and bring products to market with clarity and confidence. I've been the first marketing hire and marketing lead at early-stage startups, where I led product launches, scaled inbound pipelines, and built thriving communities.
             </p>
             <p>
-              Her journey into marketing began long before the agency. With a sharp eye for consumer behavior and a natural talent for storytelling, Onyinyechi spent years honing her skills in digital marketing, brand strategy, and audience growth — learning what truly moves people to take action.
+              My track record speaks for itself — I doubled inbound leads in six months and grew a product waitlist by <strong className="text-foreground">500% in just two weeks</strong>. These results come from a deep understanding of customer psychology, a love for bold storytelling, and an obsession with strategy that actually converts.
             </p>
             <p>
-              Today, she leads TES-M Marketing with the same energy and passion that started it all — helping ambitious brands across Nigeria and beyond connect with the right people, at the right time, with the right message.
+              I bring a strong editorial eye, a customer-first mindset, and a belief in the power of content, community, and clarity to drive business growth. Through TES-M Marketing, I channel all of that into helping ambitious brands make their mark.
             </p>
+          </div>
+
+          {/* Highlight stats */}
+          <div className="mt-12 grid grid-cols-2 gap-6">
+            <div className="bg-card border border-border rounded-2xl p-6 text-center shadow-sm">
+              <p className="text-4xl font-display font-bold text-primary mb-2">2×</p>
+              <p className="text-sm text-muted-foreground font-medium">Inbound leads doubled<br />in 6 months</p>
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 text-center shadow-sm">
+              <p className="text-4xl font-display font-bold text-accent mb-2">500%</p>
+              <p className="text-sm text-muted-foreground font-medium">Waitlist growth<br />in 2 weeks</p>
+            </div>
           </div>
         </div>
       </section>
