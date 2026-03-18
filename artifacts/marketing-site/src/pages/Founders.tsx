@@ -5,19 +5,19 @@ const founders = [
   {
     name: "Elena Rostova",
     role: "CEO & Strategy Lead",
-    bio: "With over 15 years in digital marketing, Elena previously led growth at two Fortune 500 tech companies before founding Nexus. She specializes in full-funnel performance strategy.",
+    bio: "With over 15 years in digital marketing, Elena previously led growth at two Fortune 500 tech companies before founding TES-M Marketing. She specializes in full-funnel performance strategy.",
     image: "founder-1.png",
   },
   {
     name: "Marcus Chen",
     role: "Chief Creative Officer",
-    bio: "Marcus brings award-winning design experience to Nexus. His campaigns have generated millions of views and reshaped brand identities for both startups and legacy enterprises.",
+    bio: "Marcus brings award-winning design experience to TES-M Marketing. His campaigns have generated millions of views and reshaped brand identities for both startups and legacy enterprises.",
     image: "founder-2.png",
   },
   {
     name: "Sarah Jenkins",
     role: "Head of Data & Analytics",
-    bio: "A former data scientist, Sarah turns complex datasets into actionable growth levers. She built Nexus's proprietary analytics framework that guarantees ROI transparency.",
+    bio: "A former data scientist, Sarah turns complex datasets into actionable growth levers. She built TES-M Marketing's proprietary analytics framework that guarantees ROI transparency.",
     image: "founder-3.png",
   }
 ];

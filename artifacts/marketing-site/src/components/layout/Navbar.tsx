@@ -38,9 +38,9 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="group flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-xl group-hover:scale-105 transition-transform">
-              N
+              T
             </div>
-            <span className="font-display font-bold text-xl tracking-tight">Nexus</span>
+            <span className="font-display font-bold text-xl tracking-tight">TES-M Marketing</span>
           </Link>
 
           {/* Desktop Nav */}

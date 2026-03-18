@@ -9,10 +9,10 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-xl">
-                N
+                T
               </div>
               <span className="font-display font-bold text-xl tracking-tight text-white">
-                Nexus
+                TES-M Marketing
               </span>
             </Link>
             <p className="text-gray-400 max-w-sm">
@@ -76,7 +76,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Nexus Marketing Agency. All rights reserved.
+            &copy; {new Date().getFullYear()} TES-M Marketing. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link href="#" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>

@@ -42,7 +42,7 @@ export function Home() {
               className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
             >
               We don't just market.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                 We multiply growth.
               </span>
             </motion.h1>
@@ -53,7 +53,7 @@ export function Home() {
               transition={{ delay: 0.3 }}
               className="text-xl text-muted-foreground mb-10 max-w-2xl"
             >
-              Nexus is a performance-driven digital marketing agency helping modern brands scale through data, creative, and precision execution.
+              TES-M Marketing is a performance-driven digital marketing agency helping modern brands scale through data, creative, and precision execution.
             </motion.p>
             
             <motion.div 

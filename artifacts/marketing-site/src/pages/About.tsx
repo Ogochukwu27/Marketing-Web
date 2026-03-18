@@ -44,7 +44,7 @@ export function About() {
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Our Story</h2>
           <div className="space-y-6 text-lg text-muted-foreground text-left">
             <p>
-              Founded in 2018, Nexus started with a simple observation: most agencies focus on vanity metrics instead of business outcomes. We set out to build an agency that cares about one thing above all else — profitable growth for our clients.
+              Founded in 2018, TES-M Marketing started with a simple observation: most agencies focus on vanity metrics instead of business outcomes. We set out to build an agency that cares about one thing above all else — profitable growth for our clients.
             </p>
             <p>
               We've grown from a small team of three founders in a cramped office to a global force of 45+ digital specialists. What hasn't changed is our obsessive focus on data, our relentless pursuit of creative excellence, and our commitment to transparency.
