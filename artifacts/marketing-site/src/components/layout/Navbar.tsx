@@ -28,19 +28,21 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm py-4"
-          : "bg-transparent py-6"
+          ? "py-4"
+          : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="group flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-xl group-hover:scale-105 transition-transform">
+        <div className={`flex items-center justify-between transition-all duration-500 rounded-full px-6 py-3 ${
+          isScrolled ? "glassmorphism border border-border/50 shadow-lg shadow-black/5" : "bg-transparent"
+        }`}>
+          <Link href="/" className="group flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center text-primary-foreground font-display font-extrabold text-2xl group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300">
               T
             </div>
-            <span className="font-display font-bold text-xl tracking-tight">TES-M Marketing</span>
+            <span className="font-display font-extrabold text-xl tracking-tight text-foreground group-hover:text-primary transition-colors">TES-M Marketing</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -49,11 +51,14 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location === link.href ? "text-primary" : "text-foreground/80"
+                className={`text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:text-primary relative group ${
+                  location === link.href ? "text-primary" : "text-foreground/70"
                 }`}
               >
                 {link.label}
+                <span className={`absolute -bottom-2 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  location === link.href ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
               </Link>
             ))}
           </nav>
@@ -61,7 +66,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 py-2 group shadow-lg shadow-primary/20 hover:shadow-primary/30"
+              className="inline-flex items-center justify-center rounded-full text-sm font-bold transition-all duration-300 bg-foreground text-background hover:bg-primary hover:text-primary-foreground hover:scale-105 h-12 px-8 group shadow-xl"
             >
               Start Project
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -70,10 +75,10 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X /> : <Menu />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -82,29 +87,29 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden absolute top-full left-4 right-4 mt-4 glassmorphism border border-border/50 rounded-3xl overflow-hidden shadow-2xl"
           >
-            <div className="px-4 pt-2 pb-6 space-y-4">
+            <div className="p-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-4 py-2 rounded-lg text-base font-medium ${
+                  className={`block px-4 py-3 rounded-xl text-lg font-bold transition-colors ${
                     location === link.href
-                      ? "bg-primary/10 text-primary"
+                      ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-muted"
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="px-4 pt-4 border-t border-border">
+              <div className="pt-4 mt-4 border-t border-border/50">
                 <Link
                   href="/contact"
-                  className="w-full flex items-center justify-center rounded-full text-sm font-semibold transition-colors bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-6 shadow-md"
+                  className="w-full flex items-center justify-center rounded-xl text-lg font-bold transition-all bg-foreground text-background hover:bg-primary hover:text-primary-foreground h-14 shadow-md"
                 >
                   Start Project
                 </Link>
