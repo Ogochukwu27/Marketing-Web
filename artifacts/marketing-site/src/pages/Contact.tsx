@@ -81,7 +81,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Email Us</h3>
-                  <p className="text-muted-foreground mt-1">hello@nexusagency.co</p>
+                  <a href="mailto:onyinyechinwankwo3@gmail.com" className="text-muted-foreground mt-1 hover:text-primary transition-colors">onyinyechinwankwo3@gmail.com</a>
                 </div>
               </div>
               
@@ -91,7 +91,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Call Us</h3>
-                  <p className="text-muted-foreground mt-1">+1 (555) 123-4567</p>
+                  <a href="tel:+2347037144260" className="text-muted-foreground mt-1 hover:text-primary transition-colors">07037144260</a>
                 </div>
               </div>
 
@@ -102,9 +102,7 @@ export function Contact() {
                 <div>
                   <h3 className="text-lg font-bold">HQ</h3>
                   <p className="text-muted-foreground mt-1">
-                    100 Innovation Drive<br />
-                    Suite 400<br />
-                    San Francisco, CA 94105
+                    Lagos State, Nigeria
                   </p>
                 </div>
               </div>
