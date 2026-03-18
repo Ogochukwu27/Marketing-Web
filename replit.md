@@ -16,12 +16,21 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### Marketing Company Website (`artifacts/marketing-site`)
+- React + Vite frontend at `/` (root path)
+- Pages: Home, About, Services, Founders, Contact
+- Contact form POSTs to `/api/contact` (saves to DB)
+- AI-generated images in `public/images/`
+
 ## Structure
 
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── marketing-site/     # React + Vite marketing website
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks

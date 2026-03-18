@@ -1,0 +1,28 @@
+packages:
+  "framer-motion": "For page transitions and scroll-triggered animations to give a premium feel"
+  "@hookform/resolvers": "Zod validation integration for the contact form"
+  "react-hook-form": "Form state management"
+  "zod": "Schema validation for forms"
+  "clsx": "Utility for constructing className strings"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+
+images:
+  - path: "artifacts/marketing-site/public/images/hero-bg.png"
+    description: "Dark abstract geometric 3d shapes with glowing electric blue and violet lighting, ultra high quality, 8k resolution, modern agency vibe, dark mode"
+    aspect_ratio: "16:9"
+  - path: "artifacts/marketing-site/public/images/about-bg.png"
+    description: "Modern sleek minimalist office interior with subtle blue lighting, blurred background, strong depth of field, architectural"
+    aspect_ratio: "16:9"
+  - path: "artifacts/marketing-site/public/images/founder-1.png"
+    description: "Professional portrait of a confident female executive in a modern office, cinematic lighting, sharp focus, 35mm lens"
+    aspect_ratio: "3:4"
+  - path: "artifacts/marketing-site/public/images/founder-2.png"
+    description: "Professional portrait of a creative male art director with glasses, modern minimalistic background, studio lighting"
+    aspect_ratio: "3:4"
+  - path: "artifacts/marketing-site/public/images/founder-3.png"
+    description: "Professional portrait of a friendly female tech lead, warm lighting, contemporary office environment"
+    aspect_ratio: "3:4"
+
+notes:
+  - "The app relies on the generated API hooks in @workspace/api-client-react for submitting contact form data."
+  - "Tailwind v4 syntax is used in index.css with Outfit and DM Sans fonts."
