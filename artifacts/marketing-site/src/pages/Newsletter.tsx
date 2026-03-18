@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Users, Zap, Mail } from "lucide-react";
 
 // ✏️ Update this URL to your actual Substack link
-const SUBSTACK_URL = "https://onyinyechi.substack.com";
+const SUBSTACK_URL = "https://substack.com/@theearlystagemarketer";
 
 const perks = [
   {
