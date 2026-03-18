@@ -45,7 +45,7 @@ export function Newsletter() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm mb-8"
           >
             <Mail className="w-4 h-4" />
-            Pioneer Newsletter for Startup Marketers
+            Newsletter by Onyinyechi Nwankwo
           </motion.div>
 
           <motion.h1
@@ -54,8 +54,9 @@ export function Newsletter() {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-tight mb-6"
           >
-            Marketing clarity for{" "}
-            <span className="text-primary">early-stage</span> startups.
+            The{" "}
+            <span className="text-primary">Early Stage</span>{" "}
+            Marketer
           </motion.h1>
 
           <motion.p
@@ -64,7 +65,7 @@ export function Newsletter() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            A fast-growing newsletter by Onyinyechi Nwankwo — Product Marketing Manager, first marketing hire, and community builder. Written for marketers navigating the chaos of early-stage startups.
+            Marketing insights for folks with 0–3 years of work experience in early-stage tech startups.
           </motion.p>
 
           <motion.div
@@ -99,7 +100,7 @@ export function Newsletter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-extrabold mb-4">What readers get</h2>
-            <p className="text-lg text-muted-foreground">Each edition is short, sharp, and genuinely useful for marketers doing real work at early-stage companies.</p>
+            <p className="text-lg text-muted-foreground">Each edition is written specifically for marketers at the 0–3 year mark — navigating the unique chaos of early-stage tech startups.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -167,9 +168,9 @@ export function Newsletter() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-display font-extrabold mb-6"
           >
-            Join a growing community of startup marketers.
+            Start your journey with <span className="text-primary">The Early Stage Marketer.</span>
           </motion.h2>
-          <p className="text-xl text-muted-foreground mb-10">Free to subscribe. Real insights. No spam.</p>
+          <p className="text-xl text-muted-foreground mb-10">Free to subscribe. Marketing insights built for where you are right now — 0 to 3 years in.</p>
           <a
             href={SUBSTACK_URL}
             target="_blank"
