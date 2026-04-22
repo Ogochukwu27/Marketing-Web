@@ -1,6 +1,34 @@
 import { Link } from "wouter";
-import { ArrowRight, Globe, PenTool, Target, Zap, ChevronRight, BarChart3 } from "lucide-react";
+import { ArrowRight, Globe, PenTool, Target, Zap, ChevronRight, BarChart3, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "What kind of brands do you work with?",
+    a: "We partner with ambitious early-stage startups, growing SMEs, and established brands across tech, lifestyle, fintech, and consumer sectors — primarily in Nigeria and across Africa, but we work with global clients too.",
+  },
+  {
+    q: "What services does TES-M Marketing offer?",
+    a: "We offer end-to-end digital marketing — including SEO, social media management, content marketing, paid advertising, product marketing, community building, and event hosting. Our approach is data-driven and tailored to each brand.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Easy — head to our Contact page and send us a message with a bit about your business and goals. We'll respond within 24 hours to schedule a free discovery call.",
+  },
+  {
+    q: "Do you offer one-off projects or only retainers?",
+    a: "Both. We offer one-off projects (like product launches, campaigns, or audits) as well as ongoing monthly retainers for brands that want consistent growth support.",
+  },
+  {
+    q: "How quickly will I see results?",
+    a: "It depends on the service — paid advertising can drive results within days, while SEO and content marketing typically show meaningful traction within 3–6 months. We share clear milestones up front so you always know what to expect.",
+  },
+  {
+    q: "Is there a newsletter I can follow?",
+    a: "Yes! Onyinye writes The Early Stage Marketer — a free newsletter with marketing insights for folks with 0–3 years of work experience in early-stage tech startups. Check it out on the Newsletter page.",
+  },
+];
 
 const stats = [
   { label: "Clients Served", value: "250+" },
@@ -175,6 +203,58 @@ export function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Separator gradient */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
+
+      {/* FAQ Section */}
+      <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm mb-6">
+              <HelpCircle className="w-4 h-4" />
+              Frequently Asked Questions
+            </div>
+            <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-tight mb-4">
+              Got <span className="text-primary">questions?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Quick answers to the things people ask us most. Don't see yours? Drop us a message.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`item-${i}`}
+                  className="bg-card border border-border rounded-2xl px-6 hover:border-primary/40 transition-colors data-[state=open]:border-primary/60 data-[state=open]:shadow-lg data-[state=open]:shadow-primary/5"
+                >
+                  <AccordionTrigger className="text-left text-lg font-display font-bold hover:no-underline py-6">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
         </div>
       </section>
 
